@@ -29,7 +29,7 @@ export const Title = styled.h1`
   color: black;
 `;
 
-export const ContainerInfo = styled.h1`
+export const CardsInfo = styled.h1`
   width: 100%;
   height: 65vh;
 
@@ -81,4 +81,5 @@ export const Name = styled.h3`
   font-size: 28px;
   color: white;
 
+  justify-content: space-between;
 `;
