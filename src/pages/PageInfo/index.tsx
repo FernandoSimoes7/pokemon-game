@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import NavBarTop from '../../components/NavBarTop';
 import { Atributes, BoxInfo, CardsInfo, Icon, Name, SearchBar, Title, TitleBar } from './style';
 import img from '../../assets/pokebolas.jpg';
