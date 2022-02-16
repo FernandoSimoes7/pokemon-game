@@ -6,10 +6,10 @@ function DashBoard() {
     <Container>
       <InfoPerson>
         <img src="" alt="Avatar" />
-        <p>NAME POKEMON</p> 
+        <p>Name Pokemon</p> 
       </InfoPerson>
       <GameArea>
-        GAMEEE
+        Game
       </GameArea>
     </Container>
   );

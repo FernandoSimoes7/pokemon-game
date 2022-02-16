@@ -1,23 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #FF7070;
+  background-color: #ff7070;
   width: 25vw;
   height: 90vh;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  border-top: solid var(--navbar-border) 10px;
 `;
 
 export const Title = styled.h1`
-  margin: 12px 0;
+  margin-top: 8px;
+  font-size: 52px;
 `;
 
 export const DivList = styled.div`
   background-color: transparent;
   width: 85%;
-  height: 85%;
+  height: 55vh;
 
   border-radius: 10px;
 `;
@@ -28,7 +31,6 @@ export const List = styled.ul`
   display: flex;
   max-height: 100%;
   flex-direction: column;
-  align-items: center;
   overflow-y: scroll;
   scroll-behavior: smooth;
 
@@ -38,8 +40,19 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  color: white;
-  padding-bottom: 10px;
+  color: black;
+  font-family: 'Holtwood One SC';
+  padding-bottom: 15px;
+
+  font-size: 20px;
+  transition: 0.2s;
+
+  :hover {
+    color: #f11a27;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
   :first-child {
     padding-top: 10px;
   }
