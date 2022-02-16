@@ -14,8 +14,8 @@ function PageInfo() {
       </TitleBar>
       <CardsInfo>
         <BoxInfo>
-          <Name>Bulbasaur <small>#001</small></Name>
-          <Icon><img src={img} alt="icon bulbasaur" width={310} height={240}/></Icon>
+          <Name><p>Bulbasaur</p><small>#001</small></Name>
+          <Icon><img src="" alt="icon bulbasaur"/></Icon>
           <Atributes><p>Altura</p><p>0.00m</p></Atributes>
           <Atributes><p>Peso</p><p>00kg</p></Atributes>
         </BoxInfo>

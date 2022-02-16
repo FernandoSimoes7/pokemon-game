@@ -25,13 +25,23 @@ export const SearchBar = styled.input`
 `;
 
 export const Title = styled.h1`
-  margin: 12px 0;
-  color: black;
+  width: 60vw;
+  height: 18vh;
+  background-color: black;
+  opacity: 0.75;
+  color: white;
+
+  margin: 0px 0px 12px 0px;
+  border-radius: 0px 0px 40px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CardsInfo = styled.h1`
   width: 100%;
-  height: 65vh;
+  height: 60vh;
 
   display: flex;
   flex-wrap: wrap;
@@ -42,13 +52,13 @@ export const CardsInfo = styled.h1`
 export const BoxInfo = styled.div`
   width: 25vw;
   height: 60vh;
-  background-color: blue;
+  background: linear-gradient(#DEDEDE, #FF7070);
   border-radius: 15px;
   padding: 8px 12px;
 
   cursor: pointer;
   
-  margin: 1vh 2vw;
+  margin: 3vh 2vw;
   :first-child {
     margin-rigth: 0vh;
     margin-left: 2vw;
@@ -57,6 +67,7 @@ export const BoxInfo = styled.div`
     margin-left: 0vh;
     margin-rigth: 2vw;
   }
+  box-shadow: 5px 5px 5px 1px black
 `;
 
 export const Atributes = styled.div`
@@ -65,21 +76,32 @@ export const Atributes = styled.div`
   justify-content: space-between;
 
   font-size: 16px;
-  color: white;
+  color: black;
 `;
 
 export const Icon = styled.div`
-  font-size: 16px;
+  width: 100%;
+  heigth: 65%;
+  margin-bottom: 7px;
+  padding: 10px;
 
-  width: 95%;
-  heigth: 70%;
-  background-color: yellow;
-  position: center;
+  background-color: #ECECEC;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Name = styled.h3`
   font-size: 28px;
-  color: white;
+  color: black;
 
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+
+  >small {
+    font-size: 16px;
+  }
 `;
