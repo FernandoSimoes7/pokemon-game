@@ -36,6 +36,10 @@ export const TitleDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > img {
+    height: 10vh !important;
+  }
 `;
 
 export const BoxCards = styled.div`

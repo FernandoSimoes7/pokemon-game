@@ -7,7 +7,9 @@ export default createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-    font-family: 'Font Name';
+    font-family: 'Font Name', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;;
   }
 
   html, body, #root {

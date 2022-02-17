@@ -8,12 +8,10 @@ const PageInfo: React.FC = () => {
       <NavBarTop />
       <TitleBar>
         <TitleDiv>
-          <a href="/">
-            <img
-              src="https://fontmeme.com/permalink/220216/dfa82dbc91316d8db28f5e9df5eba887.png"
-              alt="title-infos"
-            />
-          </a>
+          <img
+            src="https://fontmeme.com/permalink/220216/dfa82dbc91316d8db28f5e9df5eba887.png"
+            alt="title-infos"
+          />
         </TitleDiv>
         <SearchBar placeholder="Pesquisar Pokemon" type="text"></SearchBar>
       </TitleBar>

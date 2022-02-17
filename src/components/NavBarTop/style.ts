@@ -15,12 +15,15 @@ export const Container = styled.div`
 `;
 
 export const DivLogo = styled.div`
-  width: 250px;
+  width: 23vw;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
-  >img{
-    opacity: 1 !important;
+  > a {
+    > img {
+      padding-top: 2vh;
+      height: 10vh;
+    }
   }
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   background: linear-gradient(#dedede, #f11a27);
   border-radius: 15px;
-  box-shadow: 5px 5px 5px 0.1px black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const Atributes = styled.div`

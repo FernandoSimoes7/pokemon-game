@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, DivList, List, Title } from './style';
+import { Button, Container, DivList, Item, List } from './style';
 
 const SideBar: React.FC = () => {
   return (
     <Container>
-      <Title>Pokémons</Title>
       <DivList>
         <List></List>
       </DivList>

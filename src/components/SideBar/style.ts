@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #ff7070;
-  width: 25vw;
+  background-color: #ececec;
+  width: 30vw;
   height: 90vh;
 
   display: flex;
@@ -12,17 +12,15 @@ export const Container = styled.div`
   border-top: solid var(--navbar-border) 10px;
 `;
 
-export const Title = styled.h1`
-  margin-top: 8px;
-  font-size: 52px;
-`;
-
 export const DivList = styled.div`
-  background-color: transparent;
-  width: 85%;
-  height: 55vh;
+  background-color: #f2f2f2;
+  width: 90%;
+  height: 70vh;
+  margin-top: 5vh;
+  padding-left: 15px;
 
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
 `;
 
 export const List = styled.ul`
@@ -66,21 +64,22 @@ export const Button = styled.button`
   padding: 2px 15px;
   font-size: 20px;
 
-  background-color: red;
+  background-color: #ed3237;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   transition: 0.6s;
 
   :hover {
     cursor: pointer;
-    background-color: yellow;
+    background-color: #3b5ba7;
   }
 
   a {
     text-decoration: none;
     color: white;
+    font-family: 'Holtwood One SC';
     :hover {
-      color: black;
+      color: #ffcb05;
     }
   }
 `;
