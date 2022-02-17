@@ -1,4 +1,5 @@
 import React from 'react';
+import CardPokemon from '../../Components/CardPokemon';
 import NavBarTop from '../../Components/NavBarTop';
 import { BoxCards, SearchBar, TitleBar, TitleDiv } from './style';
 
@@ -15,7 +16,9 @@ const PageInfo: React.FC = () => {
         </TitleDiv>
         <SearchBar placeholder="Pesquisar Pokemon" type="text"></SearchBar>
       </TitleBar>
-      <BoxCards></BoxCards>
+      <BoxCards>
+        <CardPokemon></CardPokemon>
+      </BoxCards>
     </>
   );
 };

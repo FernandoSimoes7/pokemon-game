@@ -39,6 +39,7 @@ export const TitleDiv = styled.div`
 
   > img {
     height: 10vh !important;
+    opacity: 0.95;
   }
 `;
 

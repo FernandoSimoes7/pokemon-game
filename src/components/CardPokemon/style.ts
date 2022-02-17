@@ -9,9 +9,9 @@ export const Container = styled.div`
 
   margin-top: 10vh;
 
-  background: linear-gradient(#dedede, #f11a27);
+  background: linear-gradient(#ececec, #f2f2f2, #f11a27);
   border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
 `;
 
 export const Atributes = styled.div`
