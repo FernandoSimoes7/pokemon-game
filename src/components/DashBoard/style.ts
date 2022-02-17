@@ -1,4 +1,9 @@
 import styled, { keyframes } from 'styled-components';
+//https://www.youtube.com/watch?v=sbz13HBSgxY       AUDIO GAME OVER
+import Img from "../../assets/cloud.png"
+
+import Img2 from "../../assets/pokeball.png"
+
 
 const JumpKF = keyframes`
   0% {
@@ -29,6 +34,16 @@ const BlockKF = keyframes`
 
   100% {
     left: -20px;
+  }
+`;
+
+const CloudKF = keyframes` 
+  0% {
+    left: 600px;
+  }
+
+  100% {
+    left: -220px;
   }
 `;
 
@@ -70,35 +85,58 @@ export const GameArea = styled.div`
 `;
 
 export const Game = styled.div`
+overflow: hidden;
   width: 600px;
   height: 200px;
   border-bottom: 1px solid black;
   margin: auto;
 `;
 
-export const Dino = styled.div`
+export const Dino = styled.img`
   width: 50px;
-  height: 50px;
-  background-color: yellow;
+  height: 50px; 
   background-size: 50px 50px;
   position: relative;
   top: 150px;
 `;
 
-export const Cactus = styled.div`
-  width: 20px;
-  height: 40px;
+export const Pokeball = styled.div`
+  width: 50px;
+  height: 50px;
   position: relative;
-  top: 110px;
+  top: 98px;
   left: 580px;
 
-  background-color: green;
-  background-size: 20px 40px;
+  background: url(${Img2});
+  background-size: 50px 50px;
 
-  animation: ${BlockKF} 1s infinite linear;
+  animation: ${BlockKF} 2s infinite linear;
 `;
 
 export const Jump = styled.div`
-  animation: ${JumpKF} 0.3s linear;
+animation: ${JumpKF} 0.3s linear;
 `;
 
+export const Cloud1 = styled.div`
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(${Img});
+  background-size: 100px 100px;
+  position: relative;
+  top: -100px;
+  object-fit: unset;
+  animation: ${CloudKF} 8s linear infinite;
+`;
+
+export const Cloud2 = styled.div`
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url(${Img});
+  background-size: 80px 80px;
+  position: relative;
+  top: -80px;
+  object-fit: unset;
+  animation: ${CloudKF} 6s linear infinite;
+`;

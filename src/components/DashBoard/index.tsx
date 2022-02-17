@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Cactus, Container, Dino, Game, GameArea, InfoPerson } from './style';
+import { Pokeball, Cloud1, Cloud2, Container, Dino, Game, GameArea, InfoPerson } from './style';
 
 function DashBoard() {
   useEffect(() => {
@@ -15,8 +15,12 @@ function DashBoard() {
       <GameArea>
 
         <Game>
-          <Dino></Dino>
-          <Cactus></Cactus>
+          <Dino src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"></Dino>
+           <Pokeball />
+          <>
+            <Cloud1 />
+            <Cloud2 />
+          </>
         </Game>
 
       </GameArea>
