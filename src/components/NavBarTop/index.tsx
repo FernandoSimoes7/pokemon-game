@@ -1,14 +1,14 @@
 import React from 'react';
-import { DivLogo, Container } from './style';
+import { Container, DivLogo } from './style';
 
-function NavBarTop() {
+const NavBarTop: React.FC = () => {
   return (
     <Container>
       <DivLogo>
-        <img src="pokeapi.png" alt="Logo API" width={100}/>
+        <img src="pokeapi.png" alt="Logo API" width={100} />
       </DivLogo>
     </Container>
   );
-}
+};
 
 export default NavBarTop;

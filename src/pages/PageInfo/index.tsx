@@ -1,33 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import CardPokemon from '../../components/CardPokemon';
-import NavBarTop from '../../components/NavBarTop';
-import { Api } from '../../services/api';
-import { BoxCards, SearchBar, TitleDiv, TitleBar } from './style';
+import React from 'react';
+import NavBarTop from '../../Components/NavBarTop';
+import { BoxCards, SearchBar, TitleBar, TitleDiv } from './style';
 
-function PageInfo() {
-  const url = '/pokemon?offset=0&limit=10';
-  const [pokemon, setPokemon] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      searchPokemons();
-    })();
-  }, []);
-
-  const searchPokemons = async () => {
-    await Api.get(url)
-      .then((response: any) => {
-        let results = response.data.results;
-        if (results) {
-          let data = results;
-          setPokemon(data);
-        }
-      })
-      .catch((err: any) => {
-        console.error(err);
-      });
-  };
-
+const PageInfo: React.FC = () => {
   return (
     <>
       <NavBarTop />
@@ -40,15 +15,11 @@ function PageInfo() {
             />
           </a>
         </TitleDiv>
-        <SearchBar placeholder="Pesquisar Pokemon"></SearchBar>
+        <SearchBar placeholder="Pesquisar Pokemon" type="text"></SearchBar>
       </TitleBar>
-      <BoxCards>
-        {pokemon?.map((data: any, idx: number) => {
-          return <CardPokemon key={idx} />;
-        })}
-      </BoxCards>
+      <BoxCards></BoxCards>
     </>
   );
-}
+};
 
 export default PageInfo;

@@ -1,30 +1,30 @@
 import React from 'react';
-import { Container, Div, Icon, Atributes } from './style';
+import { Atributes, Container, Div, Icon } from './style';
 
-function CardPokemon() {
+const CardPokemon: React.FC = () => {
   return (
     <Container>
       <Div>
-        <p>Bulbasaur</p>
-        <small>#001</small>
+        <p></p>
+        <small></small>
       </Div>
       <Icon>
-        <img src="" alt="icon bulbasaur" />
+        <img src="" alt="" />
       </Icon>
       <Div>
         <Atributes>
           <p>Altura</p>
-          <p>0.00m</p>
+          <p></p>
         </Atributes>
       </Div>
       <Div>
         <Atributes>
-          <p>Peso</p>
-          <p>00kg</p>
+          <p>Vida</p>
+          <p></p>
         </Atributes>
       </Div>
     </Container>
   );
-}
+};
 
 export default CardPokemon;

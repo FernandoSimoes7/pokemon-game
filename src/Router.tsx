@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import PageInfo from './pages/PageInfo';
+import Home from './Pages/Home';
+import PageInfo from './Pages/PageInfo';
 
-function Router() {
+const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,5 +12,6 @@ function Router() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
+
 export default Router;
