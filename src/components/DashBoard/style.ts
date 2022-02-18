@@ -89,7 +89,7 @@ export const Game = styled.div`
   }
 `;
 
-export const Dino = styled.img`
+export const Pokemon = styled.img`
   width: 50px;
   height: 50px;
   background-size: 50px 50px;
