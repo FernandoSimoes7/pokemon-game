@@ -39,6 +39,10 @@ export const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > img {
+    min-height: 100%;
+  }
 `;
 
 export const Div = styled.div`
