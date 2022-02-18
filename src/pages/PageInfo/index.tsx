@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../Api';
-import CardPokemon from '../../Components/CardPokemon';
-import NavBarTop from '../../Components/NavBarTop';
-import { BoxCards, SearchBar, TitleBar, TitleDiv } from './style';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Api } from "../../Api";
+import CardPokemon from "../../components/CardPokemon";
+import NavBarTop from "../../components/NavBarTop";
+import { BoxCards, SearchBar, TitleBar, TitleDiv } from "./style";
 
 interface pokemonDetailsProps {
   id: string;
@@ -20,12 +20,12 @@ interface PokemonInfo {
 
 const PageInfo: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const url = '/pokemon/';
+  const url = "/pokemon/";
 
   const initialPokemon: PokemonInfo = {
-    sprites: '',
+    sprites: "",
     id: 0,
-    name: '',
+    name: "",
     height: 0,
     weight: 0,
     types: [],

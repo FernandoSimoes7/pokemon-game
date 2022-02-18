@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import DashBoard from '../../Components/DashBoard';
-import NavBarTop from '../../Components/NavBarTop';
-import SideBar from '../../Components/SideBar';
+import React from "react";
+import styled from "styled-components";
+import DashBoard from "../../components/DashBoard";
+import NavBarTop from "../../components/NavBarTop";
+import SideBar from "../../components/SideBar";
 
 const Container = styled.div`
   display: flex;
