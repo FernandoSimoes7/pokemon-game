@@ -8,6 +8,7 @@ const Router: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Home />} />
         <Route path="/info/:id" element={<PageInfo />} />
       </Routes>
     </BrowserRouter>
