@@ -1,11 +1,12 @@
 import React from 'react';
 import { Atributes, Container, Div, Icon } from './style';
 
-export interface PokemonInfo {
-  dataPokemon: any;
+export interface PokemonProps {
+  dataPokemon?: any;
+  namePokemon?: string;
 }
 
-const CardPokemon: React.FC<PokemonInfo> = ({ dataPokemon }) => {
+const CardPokemon: React.FC<PokemonProps> = ({ dataPokemon }) => {
   return (
     <Container>
       <Div>
@@ -13,18 +14,18 @@ const CardPokemon: React.FC<PokemonInfo> = ({ dataPokemon }) => {
         <small></small>
       </Div>
       <Icon>
-        <img src={dataPokemon.sprites} alt="" />
+        <img src={dataPokemon.fotos} alt="" />
       </Icon>
       <Div>
         <Atributes>
           <p>Altura</p>
-          <p>{dataPokemon.height}</p>
+          <p>{dataPokemon.height * 10}cm </p>
         </Atributes>
       </Div>
       <Div>
         <Atributes>
           <p>Peso</p>
-          <p>{dataPokemon.weight}</p>
+          <p>{dataPokemon.weight / 10}Kg</p>
         </Atributes>
       </Div>
       <Div>

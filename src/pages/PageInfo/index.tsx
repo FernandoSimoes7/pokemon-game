@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Api } from '../../Api';
 import CardPokemon from '../../Components/CardPokemon';
 import NavBarTop from '../../Components/NavBarTop';
 import { BoxCards, SearchBar, TitleBar, TitleDiv } from './style';
 
-interface pokemonDetailsProps {
-  id: string;
-}
-
 interface PokemonInfo {
-  sprites: string;
+  fotos: string;
   id: number;
   name: string;
   height: number;
@@ -18,12 +13,60 @@ interface PokemonInfo {
   types: string[];
 }
 
+interface PropsSearch {
+  name: string;
+  url: string;
+}
+
 const PageInfo: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const [pokes, setPokes] = useState([]);
+
+  useEffect(() => {
+    searchPokemons();
+  }, []);
+
+  const searchPokemons = async () => {
+    await Api.get(url)
+      .then((response: any) => {
+        let results = response.data.results;
+        if (results) {
+          let data = results;
+          setPokes(data);
+        }
+      })
+      .catch((err: any) => {
+        console.error(err);
+      });
+  };
+
+  const urlForSearch = '/pokemon?offset=0&limit=20';
+  const [searchPokemon, setSearchPokemon] = useState<PropsSearch[]>([]);
+
+  useEffect(() => {
+    newSearchPokemons();
+  }, []);
+
+  const newSearchPokemons = async () => {
+    await Api.get(urlForSearch)
+      .then((response: any) => {
+        let results = response.data.results;
+        if (results) {
+          let data = results;
+          setSearchPokemon(data);
+        }
+      })
+      .catch((err: any) => {
+        console.error(err);
+      });
+  };
+
+  // ------------------------------------------------------------------------------
+  // searchBar criar component
+
   const url = '/pokemon/';
 
-  const initialPokemon: PokemonInfo = {
-    sprites: '',
+  let initialPokemon: PokemonInfo = {
+    fotos: '',
     id: 0,
     name: '',
     height: 0,
@@ -32,14 +75,23 @@ const PageInfo: React.FC = () => {
   };
 
   const [pokemon, setPokemon] = useState<PokemonInfo>(initialPokemon);
+  const [urlSearch, setUrlSearch] = useState('');
+
+  const submitSearch = (e: any) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    let dataSearch = e.target.value;
+    setUrlSearch(dataSearch);
+    console.log(urlSearch, dataSearch);
+  };
 
   useEffect(() => {
     (async () => {
-      await Api.get(url + id)
+      await Api.get(url + urlSearch)
         .then(({ data }) => {
           console.log(data);
-          const currentPokemon: PokemonInfo = {
-            sprites: data.sprites.front_default,
+          let currentPokemon: PokemonInfo = {
+            fotos: data.sprites.front_default,
             id: data.id,
             name: data.name,
             height: data.height,
@@ -49,10 +101,10 @@ const PageInfo: React.FC = () => {
           setPokemon(currentPokemon);
         })
         .catch((err) => {
-          console.error(err);
+          // console.error(err);
         });
     })();
-  }, [id]);
+  }, [urlSearch]);
 
   return (
     <>
@@ -64,7 +116,11 @@ const PageInfo: React.FC = () => {
             alt="title-infos"
           />
         </TitleDiv>
-        <SearchBar placeholder="Pesquisar Pokemon" type="text"></SearchBar>
+        <SearchBar
+          onChange={submitSearch}
+          placeholder="Pesquisar Pokemon"
+          type="text"
+        />
       </TitleBar>
       <BoxCards>
         <CardPokemon dataPokemon={pokemon}></CardPokemon>

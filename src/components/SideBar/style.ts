@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -37,7 +38,7 @@ export const List = styled.ul`
   }
 `;
 
-export const Item = styled.li`
+export const Item = styled(Link)`
   color: black;
   font-family: 'Holtwood One SC';
   padding-bottom: 15px;
