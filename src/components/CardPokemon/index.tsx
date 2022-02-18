@@ -1,26 +1,36 @@
 import React from 'react';
 import { Atributes, Container, Div, Icon } from './style';
 
-const CardPokemon: React.FC = () => {
+export interface PokemonInfo {
+  dataPokemon: any;
+}
+
+const CardPokemon: React.FC<PokemonInfo> = ({ dataPokemon }) => {
   return (
     <Container>
       <Div>
-        <p></p>
+        <p>{dataPokemon.name}</p>
         <small></small>
       </Div>
       <Icon>
-        <img src="" alt="" />
+        <img src={dataPokemon.sprites} alt="" />
       </Icon>
       <Div>
         <Atributes>
           <p>Altura</p>
-          <p></p>
+          <p>{dataPokemon.height}</p>
         </Atributes>
       </Div>
       <Div>
         <Atributes>
-          <p>Vida</p>
-          <p></p>
+          <p>Peso</p>
+          <p>{dataPokemon.weight}</p>
+        </Atributes>
+      </Div>
+      <Div>
+        <Atributes>
+          <p>Tipo</p>
+          <p>{dataPokemon.types}</p>
         </Atributes>
       </Div>
     </Container>
